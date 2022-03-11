@@ -2,7 +2,7 @@
 - Create database
 - Copy ".env.example" to ".env"
 - Change the database name in ".env" file
-- Configure MAIL configurations as follows
+- Configure MAIL configurations as follows (Add Email with options "Less Secure Apps" enabled)
     ```bash
         MAIL_MAILER=smtp
         MAIL_HOST=smtp.gmail.com
