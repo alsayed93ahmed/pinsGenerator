@@ -29,7 +29,9 @@ class Mailer extends Mailable
      */
     public function build(): Mailer
     {
-        return $this->view('emailsTemplates.generatedPinsEmail')
+        return $this->from($address = 'noreply@domain.com', $name = 'Pins Generator Admin')
+            ->subject('Pin Generator Service')
+            ->view('emailsTemplates.generatedPinsEmail')
             ->with([
                 'subject' => "Mail from Pins Generator",
                 'data' => $this->data,

@@ -89,7 +89,6 @@ class HomeController extends Controller
             DB::commit();
             return response()->json('PINs generated successfully', 200);
         } catch (\Exception $e) {
-            dd($e);
             DB::rollBack();
             return response()->json($e->getMessage(), $e->getCode());
         }
